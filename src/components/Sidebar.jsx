@@ -1,7 +1,7 @@
 import Categories from './Categories';
 import { Stack } from '@mui/material';
 
-const Sidebar = () => (
+const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
   <Stack
     direction='row'
     sx={{
@@ -10,7 +10,10 @@ const Sidebar = () => (
       flexDirection: { md: 'column' },
     }}
   >
-    <Categories />
+    <Categories
+      selectedCategory={selectedCategory}
+      setSelectedCategory={setSelectedCategory}
+    />
   </Stack>
 );
 
